@@ -67,4 +67,4 @@ class GenericAbstractFactoryPattern {
     }
 }
 
-
+export default GenericAbstractFactoryPattern
