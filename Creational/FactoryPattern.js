@@ -5,8 +5,6 @@
  */
 
 
-import GenericPrototypePattern from './PrototypePattern'
-
 /**
  * 表示一个人的类
  * @class Person
