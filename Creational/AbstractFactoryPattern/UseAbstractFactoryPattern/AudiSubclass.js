@@ -5,15 +5,27 @@
 */
 
 import GenericAbstractFactoryPattern from '../AbstractFactoryPattern'
-import { Car } from './BasicCarClass'
+import { Car, Chassis, Engine } from './BasicCarClass'
 
 /**
  * AudiCar类，继承自Car类，代表一辆奥迪汽车。
  * 该类通过构造函数初始化一辆奥迪汽车的具体属性。
  */
-class AudiCar extends Car{
+class AudiCar extends Car {
     constructor(options) {
-        super(options) // 调用父类构造函数，设置奥迪汽车的名称为'Audi'，灯为'LED'，颜色为'黑色'
+        super({ name: 'Audi', lights: 'LED', color: 'Black', ...options })
+    }
+}
+
+class AudiEngine extends Engine {
+    constructor(options) {
+        super({ type: 'Audi Engine', horsepower: '300', ...options })
+    }
+}
+
+class AudiChassis extends Chassis {
+    constructor(options) {
+        super({ material: 'Aluminum', type: 'Audi Chassis', ...options })
     }
 }
 
@@ -55,3 +67,5 @@ class AudiSubclass extends GenericAbstractFactoryPattern {
     }
     
 }
+
+export default AudiSubclass
