@@ -10,6 +10,8 @@ import { Car, Chassis, Engine } from './BasicCarClass'
 /**
  * AudiCar类，继承自Car类，代表一辆奥迪汽车。
  * 该类通过构造函数初始化一辆奥迪汽车的具体属性。
+ * @param {Object} options 对象参数，用于初始化奥迪汽车的额外属性。
+ * options 可以包含任意奥迪汽车特有的属性。
  */
 class AudiCar extends Car {
     constructor(options) {
@@ -17,17 +19,30 @@ class AudiCar extends Car {
     }
 }
 
+/**
+ * AudiEngine类，继承自Engine类，代表奥迪汽车的引擎。
+ * 该类通过构造函数初始化奥迪汽车引擎的具体属性。
+ * @param {Object} options 对象参数，用于初始化奥迪汽车引擎的额外属性。
+ * options 可以包含任意奥迪引擎特有的属性。
+ */
 class AudiEngine extends Engine {
     constructor(options) {
         super({ type: 'Audi Engine', horsepower: '300', ...options })
     }
 }
 
+/**
+ * AudiChassis类，继承自Chassis类，代表奥迪汽车的车架。
+ * 该类通过构造函数初始化奥迪汽车车架的具体属性。
+ * @param {Object} options 对象参数，用于初始化奥迪汽车车架的额外属性。
+ * options 可以包含任意奥迪车架特有的属性。
+ */
 class AudiChassis extends Chassis {
     constructor(options) {
         super({ material: 'Aluminum', type: 'Audi Chassis', ...options })
     }
 }
+
 
 /**
  * AudiSubclass类，继承自GenericAbstractFactoryPattern类。
