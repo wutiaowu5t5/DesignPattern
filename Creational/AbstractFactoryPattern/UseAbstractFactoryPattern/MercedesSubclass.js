@@ -10,6 +10,10 @@ import { Car, Chassis, Engine } from './BasicCarClass'
 /**
  * MercedesCar类，继承自Car类，代表一辆梅赛德斯奔驰汽车。
  * 该类通过构造函数初始化一辆梅赛德斯奔驰汽车的具体属性。
+ * @param {Object} options 对象参数，用于初始化车辆的额外配置。
+ * @param {string} options.name 可选，车辆名称，默认为'Mercedes'。
+ * @param {string} options.lights 可选，车辆灯光类型，默认为'LED'。
+ * @param {string} options.color 可选，车辆颜色，默认为'Black'。
  */
 class MercedesCar extends Car {
     constructor(options) {
@@ -17,17 +21,32 @@ class MercedesCar extends Car {
     }
 }
 
+/**
+ * MercedesEngine类，继承自Engine类，代表梅赛德斯奔驰汽车的引擎。
+ * 该类通过构造函数初始化梅赛德斯奔驰汽车引擎的具体属性。
+ * @param {Object} options 对象参数，用于初始化引擎的额外配置。
+ * @param {string} options.type 可选，引擎类型，默认为'Mercedes Engine'。
+ * @param {string} options.horsepower 可选，引擎马力，默认为'300'。
+ */
 class MercedesEngine extends Engine {
     constructor(options) {
         super({ type: 'Mercedes Engine', horsepower: '300', ...options })
     }
 }
 
+/**
+ * MercedesChassis类，继承自Chassis类，代表梅赛德斯奔驰汽车的车架。
+ * 该类通过构造函数初始化梅赛德斯奔驰汽车车架的具体属性。
+ * @param {Object} options 对象参数，用于初始化车架的额外配置。
+ * @param {string} options.material 可选，车架材料，默认为'Aluminum'。
+ * @param {string} options.type 可选，车架类型，默认为'Mercedes Chassis'。
+ */
 class MercedesChassis extends Chassis {
     constructor(options) {
         super({ material: 'Aluminum', type: 'Mercedes Chassis', ...options })
     }
 }
+
 
 /**
  * MercedesSubclass类，继承自GenericAbstractFactoryPattern类。
