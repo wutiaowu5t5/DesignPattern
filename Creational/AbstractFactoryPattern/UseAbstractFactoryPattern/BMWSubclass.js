@@ -7,9 +7,12 @@
 import GenericAbstractFactoryPattern from '../AbstractFactoryPattern'
 import { Car, Chassis, Engine } from './BasicCarClass'
 
+
 /**
- * BMWCar类，继承自Car类，代表一辆宝马汽车。
- * 该类通过构造函数初始化一辆宝马汽车的具体属性。
+ * BMWCar 类，继承自 Car 类。
+ * 用于创建具有 BMW 特性的汽车实例。
+ * @param {Object} options - 用于初始化 BMWCar 实例的选项对象。
+ * options 可以包含任何自定义属性，但至少需要包含 name, lights, color 等预定义属性。
  */
 class BMWCar extends Car {
     constructor(options) {
@@ -17,17 +20,30 @@ class BMWCar extends Car {
     }
 }
 
+/**
+ * BMWEngine 类，继承自 Engine 类。
+ * 用于创建具有 BMW 引擎特性的引擎实例。
+ * @param {Object} options - 用于初始化 BMWEngine 实例的选项对象。
+ * options 可以包含任何自定义属性，但至少需要包含 type, horsepower 等预定义属性。
+ */
 class BMWEngine extends Engine {
     constructor(options) {
         super({ type: 'BMW Engine', horsepower: '300', ...options })
     }
 }
 
+/**
+ * BMWChassis 类，继承自 Chassis 类。
+ * 用于创建具有 BMW 底盘特性的底盘实例。
+ * @param {Object} options - 用于初始化 BMWChassis 实例的选项对象。
+ * options 可以包含任何自定义属性，但至少需要包含 material, type 等预定义属性。
+ */
 class BMWChassis extends Chassis {
     constructor(options) {
         super({ material: 'Aluminum', type: 'BMW Chassis', ...options })
     }
 }
+
 
 /**
  * BMWSubclass类，继承自GenericAbstractFactoryPattern类。
