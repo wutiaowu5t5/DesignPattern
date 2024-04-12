@@ -4,6 +4,8 @@
  * @Time: 2024/4/12 16:11
  */
 
+import DatabaseAdapter from '../AdapterPattern'
+
 // 使用ES6类语法定义旧的数据库接口
 class OldDatabase {
     operate() {

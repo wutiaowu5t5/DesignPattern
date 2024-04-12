@@ -15,3 +15,5 @@ class DatabaseAdapter {
         this.database.request()
     }
 }
+
+export default DatabaseAdapter
