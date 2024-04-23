@@ -4,7 +4,7 @@
  * @Time: 2024/4/11 15:23
  */
 
-import AudiSubclass from './AudiSubclass'
+import AudiSubclass from '../SubClass/AudiSubclass'
 
 const options = {
     carInfo: {
