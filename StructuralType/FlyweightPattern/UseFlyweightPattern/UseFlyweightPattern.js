@@ -8,19 +8,22 @@
 import CharacterFactory from '../FlyweightPattern'
 
 try {
-    // 创建并显示字符对象
+    // 尝试创建并显示字符对象
+    // 首次请求字符'A'的实例
     const charA = CharacterFactory.getCharacter('A')
     charA.display([1, 1])
     
+    // 首次请求字符'B'的实例
     const charB = CharacterFactory.getCharacter('B')
     charB.display([2, 2])
     
-    // 再次请求相同的字符对象，应该不会创建新的实例，而是复用已有的
+    // 再次请求字符'A'的实例，预期将复用之前的实例而不是创建新实例
     const anotherCharA = CharacterFactory.getCharacter('A')
     anotherCharA.display([3, 3])
     
-    // 检查两个字符'A'是否为同一个实例
-    console.log(charA === anotherCharA) // 应该输出 true，因为它们是相同的实例
+    // 验证两个字符'A'的实例是否相同
+    console.log(charA === anotherCharA) // 预期输出 true，表明两个'A'字符引用了同一实例
 } catch (error) {
+    // 捕获并输出可能发生的错误
     console.error(error)
 }
