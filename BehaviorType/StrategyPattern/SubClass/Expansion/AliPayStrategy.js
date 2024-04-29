@@ -4,9 +4,9 @@
  * @Time: 2024/4/29 17:47
  */
 
-import { PaymentStrategy } from '../../StrategyPattern'
+import BasicPaymentStrategy from '../Basic/BasicPaymentStrategy'
 
-class AliPayStrategy extends PaymentStrategy {
+class AliPayStrategy extends BasicPaymentStrategy {
     constructor(partnerId, sellerId) {
         super()
         this._partnerId = partnerId // 前缀下划线是一种常见的私有属性模拟方式
