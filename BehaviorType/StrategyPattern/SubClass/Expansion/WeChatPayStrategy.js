@@ -21,6 +21,8 @@ class WeChatPayStrategy extends BasicPaymentStrategy {
         }
         this._appId = appId
         this._apiKey = apiKey
+        
+        return this
     }
     
     // 修改pay方法为原型方法，并在调用前检查参数是否已设置
