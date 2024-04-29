@@ -4,8 +4,8 @@
  * @Time: 2024/4/10 18:06
  */
 
-import GenericAbstractFactoryPattern from '../AbstractFactoryPattern'
-import { Car, Chassis, Engine } from './BasicCarClass'
+import GenericAbstractFactoryPattern from '../../AbstractFactoryPattern'
+import { Car, Chassis, Engine } from '../Basic/BasicCarClass'
 
 
 /**
