@@ -20,6 +20,8 @@ class AliPayStrategy extends BasicPaymentStrategy {
         }
         this._partnerId = partnerId
         this._sellerId = sellerId
+        
+        return this
     }
     
     // 在调用核心功能前检查参数是否已设置
