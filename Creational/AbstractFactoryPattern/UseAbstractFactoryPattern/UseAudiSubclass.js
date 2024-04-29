@@ -1,10 +1,10 @@
 /*
- * @Description: UseAudiSubclass.js
+ * @Description: 怎么使用抽象工厂模式
  * @Author: 5t5
  * @Time: 2024/4/11 15:23
  */
 
-import AudiSubclass from '../SubClass/AudiSubclass'
+import AudiSubclass from '../SubClass/Expansion/AudiSubclass'
 
 const options = {
     carInfo: {
