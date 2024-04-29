@@ -4,8 +4,8 @@
  * @Time: 2024/4/10 18:08
  */
 
-import GenericAbstractFactoryPattern from '../AbstractFactoryPattern'
-import { Car, Chassis, Engine } from './BasicCarClass'
+import GenericAbstractFactoryPattern from '../../AbstractFactoryPattern'
+import { Car, Chassis, Engine } from '../Basic/BasicCarClass'
 
 /**
  * MercedesCar类，继承自Car类，代表一辆梅赛德斯奔驰汽车。
