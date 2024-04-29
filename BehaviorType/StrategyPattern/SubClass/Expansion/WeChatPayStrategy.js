@@ -4,9 +4,9 @@
  * @Time: 2024/4/29 17:46
  */
 
-import { PaymentStrategy } from '../../StrategyPattern'
+import BasicPaymentStrategy from '../Basic/BasicPaymentStrategy'
 
-class WeChatPayStrategy extends PaymentStrategy {
+class WeChatPayStrategy extends BasicPaymentStrategy {
     constructor(appId, apiKey) {
         super()
         const _appId = appId // 使用下划线前缀是一种常见的非正式私有属性表示法
