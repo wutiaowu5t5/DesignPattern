@@ -4,9 +4,9 @@
  * @Time: 2024/4/29 17:47
  */
 
-import { PaymentStrategy } from '../../StrategyPattern'
+import BasicPaymentStrategy from '../Basic/BasicPaymentStrategy'
 
-class CreditCardStrategy extends PaymentStrategy {
+class CreditCardStrategy extends BasicPaymentStrategy {
     constructor(cardNumber, cvv, expirationDate) {
         super()
         const _cardNumber = cardNumber
