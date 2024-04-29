@@ -4,16 +4,28 @@
  * @Time: 2024/4/29 17:47
  */
 
+/**
+ * 支付宝支付策略类，继承自基础支付策略类 BasicPaymentStrategy。
+ */
 import BasicPaymentStrategy from '../Basic/BasicPaymentStrategy'
 
 class AliPayStrategy extends BasicPaymentStrategy {
+    /**
+     * 构造函数，初始化支付宝支付策略。
+     */
     constructor() {
-        super()
-        this._partnerId = null // 初始化为null，表示未设置
-        this._sellerId = null // 同上
+        super() // 调用父类的构造函数
+        this._partnerId = null // 合作伙伴ID，初始化为null
+        this._sellerId = null // 卖家ID，初始化为null
     }
     
-    // 新增方法用于设置参数
+    /**
+     * 设置支付所需的合作伙伴和卖家ID。
+     * @param {string} partnerId 合作伙伴ID
+     * @param {string} sellerId 卖家ID
+     * @returns {AliPayStrategy} 返回当前实例，支持链式调用
+     * @throws {Error} 如果缺少合作伙伴ID或卖家ID，则抛出错误
+     */
     setCredentials(partnerId, sellerId) {
         if (!partnerId || !sellerId) {
             throw new Error('partnerId 和 sellerId 都是必填项')
@@ -24,7 +36,11 @@ class AliPayStrategy extends BasicPaymentStrategy {
         return this
     }
     
-    // 在调用核心功能前检查参数是否已设置
+    /**
+     * 执行支付操作。
+     * @param {number} amount 需要支付的金额
+     * @throws {Error} 如果未设置合作伙伴ID或卖家ID，则抛出错误
+     */
     pay(amount) {
         if (!this._partnerId || !this._sellerId) {
             throw new Error('请先调用 setCredentials 设置 PartnerId 和 SellerId')
@@ -33,4 +49,4 @@ class AliPayStrategy extends BasicPaymentStrategy {
     }
 }
 
-export default new AliPayStrategy
+export default new AliPayStrategy // 导出一个初始化好的 AliPayStrategy 实例
