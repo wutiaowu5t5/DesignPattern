@@ -23,6 +23,8 @@ class CreditCardStrategy extends BasicPaymentStrategy {
         this._cardNumber = cardNumber
         this._cvv = cvv
         this._expirationDate = expirationDate
+        
+        return this
     }
     
     pay(amount) {
