@@ -40,4 +40,4 @@ class VendingMachineState {
 }
 
 // 导出VendingMachineState类作为模块的默认导出项，便于其他模块使用
-export default VendingMachineState;
+export default VendingMachineState
