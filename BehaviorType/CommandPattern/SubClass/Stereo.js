@@ -1,5 +1,5 @@
 /*
- * @Description: Stereo.js
+ * @Description: 命令模式-控制器子类
  * @Author: 5t5
  * @Time: 2024/5/8 14:47
  */
