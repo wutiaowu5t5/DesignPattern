@@ -63,4 +63,3 @@ class ListCollection {
 }
 
 export default new ListCollection
-
