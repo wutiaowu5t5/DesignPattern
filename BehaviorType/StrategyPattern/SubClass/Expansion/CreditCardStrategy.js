@@ -55,5 +55,4 @@ class CreditCardStrategy extends BasicPaymentStrategy {
     }
 }
 
-
 export default new CreditCardStrategy // 导出信用卡支付策略的实例
