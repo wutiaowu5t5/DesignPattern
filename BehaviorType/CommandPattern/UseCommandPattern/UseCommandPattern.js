@@ -1,5 +1,5 @@
 /*
- * @Description: UseCommandPattern.js
+ * @Description: 怎么使用命令模式
  * @Author: 5t5
  * @Time: 2024/5/7 18:17
  */
