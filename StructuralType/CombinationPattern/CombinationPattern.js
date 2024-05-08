@@ -91,4 +91,3 @@ export class File extends FileSystemComponent {
         console.log(`${' '.repeat(indent)}File: ${this.name}`)
     }
 }
-
