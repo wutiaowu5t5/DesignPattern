@@ -54,5 +54,4 @@ class GenericFactoryPattern {
     }
 }
 
-
 export default GenericFactoryPattern
