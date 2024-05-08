@@ -5,7 +5,7 @@
  */
 
 // 导入TextEditor类
-import TextEditor from '../MediatorPattern'
+import TextEditor from '../MementoPattern'
 
 // 创建一个TextEditor实例
 const editor = new TextEditor()
